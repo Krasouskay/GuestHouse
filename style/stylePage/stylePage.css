@@ -444,22 +444,13 @@ a {
   padding-bottom: 150px;
   padding-left: 15px;
   /* Слайдер */
-  /* Слайдер запущен */
-  /* Слайдер с точками */
   /* Ограничивающая оболочка */
   /* Лента слайдов */
   /* Слайд */
-  /* Слайд активный (показывается) */
-  /* Слайд основной */
-  /* Слайд по центру */
-  /* Клонированный слайд */
   /* Стрелка */
   /* Стрелка влево */
   /* Стрелка вправо */
   /* Стрелка не активная */
-  /* Точки (булиты) */
-  /* Активная точка */
-  /* Элемент точки */
 }
 @media (max-width: 768px) {
   .slider {
@@ -581,6 +572,7 @@ a {
 .slider .slick-disabled {
   opacity: 0.2;
 }
+
 .come {
   background-color: rgb(255, 255, 255);
   padding-bottom: 130px;
@@ -591,12 +583,14 @@ a {
   }
 }
 .come__content {
-  display: flex;
+  display: grid;
   gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
 }
 @media (max-width: 768px) {
   .come__content {
-    flex-direction: column;
+    gap: 40px;
+    grid-template-columns: 1fr;
   }
 }
 .come__delimiter {
@@ -627,9 +621,9 @@ a {
   }
 }
 .come__card {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 20px;
 }
 .come__card-image {
   width: 36px;

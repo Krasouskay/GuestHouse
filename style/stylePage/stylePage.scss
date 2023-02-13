@@ -489,12 +489,6 @@
      
     }
 
-    /* Слайдер запущен */
-    .slick-slider slick-initialized {}
-
-    /* Слайдер с точками */
-    .slick-slider slick-dotted {}
-
     /* Ограничивающая оболочка */
     .slick-list {
         overflow: hidden;
@@ -512,20 +506,6 @@
     .slick-slide {
         min-width: 0;
     }
-
-    /* Слайд активный (показывается) */
-    .slick-slide slick-active {}
-
-    /* Слайд основной */
-    .slick-slide slick-current {}
-
-    /* Слайд по центру */
-    .slick-slide slick-center {}
-
-    /* Клонированный слайд */
-    .slick-slide slick-cloned {}
-
-
 
     /* Стрелка */
     .slick-arrow {
@@ -577,18 +557,6 @@
     .slick-disabled {
         opacity: 0.2;
     }
-
-
-    /* Точки (булиты) */
-    .slick-dots {}
-
-    .slick-dots li {}
-
-    /* Активная точка */
-    .slick-dots li slick-active {}
-
-    /* Элемент точки */
-    .slick-dots li button {}
 }
 
 .come {
@@ -600,11 +568,13 @@
     }
 
     &__content {
-        display: flex;
+        display: grid;
         gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
 
         @media (max-width: 768px){
-            flex-direction: column;
+            gap: 40px;
+        grid-template-columns: 1fr;
         }
     }
 
@@ -638,9 +608,9 @@
     }
 
     &__card {
-        display: flex;
-        gap: 16px;
-        align-items: center;
+        display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 20px;
     }
 
     &__card-image {
