@@ -1,0 +1,73 @@
+// миксины
+// сброс стилей
+// контейнер
+// общие кнопки и елементы
+
+@import '../vars/vars.scss';
+
+html, body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    cursor: pointer;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    min-width: 0;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+.button {
+    width: 120px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.separator{
+    margin: 0 auto 30px auto;
+    padding-top: 100px;
+
+    @media (max-width: 768px){
+        padding-top: 50px;
+    }
+}
+
+.headline {
+    color: $ColorGreen;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+
+    @media (max-width: 530px){
+        font-size: 30px;
+    }
+}
+
+.caption {
+    color: $ColorGreen;
+    padding-top: 14px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
